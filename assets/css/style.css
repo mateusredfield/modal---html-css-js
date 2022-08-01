@@ -1,0 +1,48 @@
+/* CONFIGURAÇÃO GERAL DO SITE */
+:root{
+    --comprimento: calc(100vw - (100vw - 100%));
+    --altura:      calc(100vh - (100vh - 100%));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background-color: aliceblue;
+    width: var(--comprimento);
+    height: var(--altura);
+}
+
+.containerModal{
+    display:none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(7, 146, 58);
+    width: calc(var(--comprimento) );
+    height: 30%;
+    text-align: center;
+    position:fixed;
+    top: 20%;
+    left: 0%;
+    z-index: 500;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.modalBase{
+    background-color: rgb(164, 250, 196);
+    width: 80%;
+    height: 80%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transicao {
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
